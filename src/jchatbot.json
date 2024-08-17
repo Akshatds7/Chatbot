@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "message": "Hi! This is Pizzahut chatbot.",
+    "metadata": {
+      "payload": [
+        {
+          "caption": "Greetings",
+          "type": "gif",
+          "url": "https://chatbot-project.s3.ap-south-1.amazonaws.com/botgo/avatars/avatar1welcome.gif"
+        }
+      ]
+    },
+    "templateId": 11,
+    "start": true,
+    "trigger": 2,
+    "userInput": false
+  },
+  {
+    "id": 2,
+    "message": "Please tell me what kind of pizza you like.",
+    "trigger": 3,
+    "userInput": true
+  },
+  {
+    "id": 3,
+    "message": "Please select from the following options",
+    "metadata": {
+      "payload": [
+        {"label": "Margherita - $10", "trigger": 4, "value": "Margherita", "price": 10},
+        {"label": "Pepperoni - $12", "trigger": 4, "value": "Pepperoni", "price": 12},
+        {"label": "Veggie - $9", "trigger": 4, "value": "Veggie", "price": 9}
+      ]
+    },
+    "templateId": 6,
+    "userInput": false
+  },
+  {
+    "id": 4,
+    "message": "Great choice! Do you want to add more toppings?",
+    "metadata": {
+      "payload": [
+        {"label": "Yes", "trigger": 5, "value": "Yes"},
+        {"label": "No", "trigger": 26, "value": "No"}
+      ]
+    },
+    "templateId": 6,
+    "userInput": false
+  },
+  {
+    "id": 5,
+    "message": "Please tell me what kind of topping would you like to have?.",
+    "trigger": 6,
+    "userInput": true
+  },
+  {
+    "id": 6,
+    "message": "Do you want extra cheese?",
+    "metadata": {
+      "payload": [
+        {"label": "Yes - $2", "trigger": 7, "value": "Extra Cheese", "price": 2},
+        {"label": "No", "trigger": 7, "value": "No Extra Cheese", "price": 0}
+      ]
+    },
+    "templateId": 6,
+    "userInput": false
+  },
+  {
+    "id": 7,
+    "message": "Your order has been placed.",
+    "trigger": 8,
+    "userInput": false
+  },
+  {
+    "id": 8,
+    "message": "Calculating your total...",
+    "trigger": 9,
+    "userInput": false
+  },
+  {
+    "id": 9,
+    "message": "Your total bill is $15.",
+    "trigger": 26,
+    "userInput": false
+  },
+  
+  {
+    "id": 26,
+    "message": "Thanks! Have a nice day!",
+    "end": true,
+    "userInput": false
+  }
+]
